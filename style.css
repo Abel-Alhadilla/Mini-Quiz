@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.screen {
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid gainsboro;
+    border-radius: 1rem;
+    display: none;
+    max-width: 400px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 0 10px 10px 10px;
+}
+
+.screen.active {
+    display: block;
+}
+
+.start {
+    text-align: center;
+}
+
+.start h1 {
+    justify-content: center;
+    font-size: 3em;
+    margin-bottom: 1rem;
+    color: hsl(0, 0%, 10%);
+}
+
+.start-button-container {
+    background-color: hsla(0, 0%, 86%, 0.297);
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.start-button-container p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: gray;
+}
+
+.start-button,
+.restart-button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    color: black;
+    background-color: hsla(0, 0%, 70%, 0.4);
+    transition: .2s;
+}
+
+.start-button:hover,
+.restart-button:hover {
+    background-color: hsla(0, 0%, 40%, 0.4);
+}
+
+.start-button:active {
+    background-color: hsla(0, 0%, 70%, 0.4);
+}
+
+.quiz .question {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.quiz .quiz-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.answer-container {
+    background-color: rgba(220, 220, 220, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.answer-button {
+    padding: 20px 30px;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    font-size: 1.2em;
+    font-weight: 400;
+    transition: .2s;
+}
+
+.answer-button:hover {
+    background-color: gainsboro;
+}
+
+.answer-button.correct {
+    /* border: 1px solid hsl(0, 0%, 100%);
+    background-color: hsl(120, 66%, 14%);
+    color: white; */
+    background-color: #DCFCE7;
+    border: 1px solid #86EFAC;
+    color: #166534;
+}
+
+.answer-button.wrong {
+    /* background-color: hsl(0, 100%, 23%);
+    border: 1px solid hsl(0, 0%, 100%);
+    color: white; */
+    background-color: #FEE2E2;
+    border: 1px solid #FCA5A5;
+    color: #991B1B;
+}
+
+.result {
+    text-align: center;
+}
+
+.result-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-text {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+}
+
+.score-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: gray;
+    font-style: italic;
+}
+
+.progres-container {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    background-color: gainsboro;
+}
+
+.progres {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 30%, 0.4);
+    transition: width .3s ease;
+}
+
+.timer-cotainer {
+    width: 100%;
+}
+
+.timer,
+.highScore {
+    font-size: 1em;
+}
+
+.time-score-info {
+    width: 100%;
+    margin: 10px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .screen,
+    .time-score-info {
+        max-width: 280px;
+        width: 100%;
+    }
+
+    
+
+    .start h1 {
+        font-size: 2rem;
+    }
+
+    .start-button-container p {
+        font-size: 1rem;
+    }
+
+    .result-text {
+        font-size: 1.9rem;
+        margin-bottom: 10px;
+    }
+
+    .score-text {
+        font-size: 1rem;
+    }
+
+    .quiz .question {
+        font-size: 1.2rem;
+    }
+
+    .answer-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .quiz .quiz-info {
+        font-size: 12px;
+        margin: 16px 0;
+    }
+
+    .timer,
+    .highScore {
+        font-size: .8rem;
+    }
+
+    .time-score-info {
+        font-size: .8rem;
+    }
+}
